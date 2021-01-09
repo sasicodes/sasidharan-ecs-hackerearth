@@ -1,0 +1,271 @@
+
+body {
+  margin: 0;
+  font-size: 14px;
+}
+.content {
+  height: 100%;
+  width: 100%;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.h-full {
+  height: 100vh;
+}
+.w-full {
+  width: 100%;
+}
+.flex {
+  display: flex;
+}
+.flex-side {
+  background-color: #ecf0f2;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-bottom: 2rem;
+}
+.flex-main {
+  flex-grow: 0;
+  margin: 30px 25px;
+}
+.text-muted {
+  color: #6c757d;
+}
+.mx-1 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.f-col {
+  flex-direction: column;
+}
+.m-0 {
+  margin: 0;
+}
+.mt-3 {
+  margin-top: 3px;
+}
+.ml-5 {
+  margin-left: 5px;
+}
+.ml-10 {
+  margin-left: 10px;
+}
+.mt-5 {
+  margin-top: 5px;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.user-item {
+  margin: 15px 0px;
+  justify-content: space-between;
+  align-items: center;
+}
+.fs-13 {
+  font-size: 13px;
+}
+.text-blue {
+  color: blue;
+}
+.start-btn {
+  background-color: blue;
+  border-color: blue;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 5px 5px;
+  box-shadow: 2px 0rem 2rem 7px rgba(0, 0, 0, 0.175);
+  border-radius: 5px;
+  font-family: inherit;
+  margin-top: 20px;
+}
+.start-btn:focus {
+  outline: none;
+}
+table {
+  width: 100%;
+  font-family: inherit;
+  margin-bottom: 1rem;
+}
+th {
+  padding: 0.75rem;
+  background-color: #ecf0f2;
+}
+td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ecf0f2;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.mt-4 {
+  margin-top: 4rem;
+}
+.pagination {
+  float: right;
+}
+.align-items-center {
+  align-items: center;
+}
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 8px;
+  text-decoration: none;
+  background-color: #ecf0f2;
+  transition: background-color 0.3s;
+  border-radius: 3px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.pagination a.active {
+  background-color: #4caf50;
+  color: white;
+}
+.user-image {
+  border-radius: 5px;
+}
+.search {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #ecf0f2;
+  padding-bottom: 7px;
+}
+.s-icon {
+  padding-top: 2px;
+  margin-right: 5px;
+  border-width: 0 0 2px;
+  border-color: #ecf0f2;
+}
+.w-25 {
+  width: 25%;
+}
+.play-area {
+  height: 100%;
+  width: 100%;
+  padding: 50px 0px;
+  background-image: url("../../assets/images/bg.png");
+}
+.justify-around {
+  justify-content: space-around;
+}
+.justify-center {
+  justify-content: center;
+}
+.card {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 15px;
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  border: 1px solid brown;
+  border-radius: 15px;
+  box-shadow: 5px 6px 50px 1px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.win-card {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 15px;
+  width: 180px;
+  height: 190px;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 15px;
+  box-shadow: 5px 6px 50px 1px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid gold;
+  position: relative;
+}
+.circle p {
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(255, 102, 0);
+  position: absolute;
+  padding: 0px 0px 0px 0px;
+  top: 50px;
+  margin: 0;
+}
+.card-label {
+  position: absolute;
+  bottom: 0px;
+  background: brown;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: white;
+  font-weight: bold;
+  padding: 3px 30px;
+  font-size: 10px;
+  left: auto;
+}
+.card-img {
+  border-radius: 5px;
+}
+.my-5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.my-30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.my-2 {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.my-10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.mx-5 {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.circle {
+  background-color: black;
+  text-align: center;
+  padding: 5% 5%;
+  margin-right: 10px;
+  border-radius: 50%;
+  color: white;
+}
+.back-btn {
+  margin-left: 30px;
+  margin-top: 30px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: black;
+  border-color: black;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  padding: 7px 35px;
+  box-shadow: 2px 0rem 2rem 7px rgba(0, 0, 0, 0.175);
+  font-family: inherit;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
