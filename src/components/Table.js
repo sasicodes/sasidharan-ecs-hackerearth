@@ -1,23 +1,26 @@
 import React from "react";
 
-export default function Table({ users, onCheck, onSortBet, onSortPrice }) {
+export default function Table({
+  list,
+  onCheck,
+  onSortRating,
+  page,
+  totalLength,
+  onClickPrev,
+  onClickNext,
+}) {
   return (
     <div>
       <table className="table">
         <thead>
           <tr>
             <th>SELECT</th>
-            <th className="text-left">PLAYER NAME</th>
-            <th>LEVEL</th>
-            <th>AVATAR</th>
-            <th className="cursor-pointer" onClick={() => onSortBet()}>
-              <img
-                src={require("../assets/images/poker-chip.png")}
-                alt=""
-                height="12"
-                width="12"
-              />{" "}
-              BET{" "}
+            <th>S.NO</th>
+            <th className="text-left">BOOK ID</th>
+            <th>TITLE</th>
+            <th>AUTHORS</th>
+            <th className="cursor-pointer" onClick={() => onSortRating()}>
+              AVG. RATING
               <img
                 src={require("../assets/images/sort.png")}
                 alt=""
@@ -25,61 +28,43 @@ export default function Table({ users, onCheck, onSortBet, onSortPrice }) {
                 width="12"
               />
             </th>
+            <th>ISBN</th>
+            <th>LANGUAGE CODE</th>
             <th>
-              <img
-                src={require("../assets/images/trophy.png")}
-                alt=""
-                height="12"
-                width="12"
-              />{" "}
-              WINS
+              RATINGS COUNT
             </th>
-            <th>LOST</th>
-            <th className="cursor-pointer" onClick={() => onSortPrice()}>
-              <img
-                src={require("../assets/images/coin.png")}
-                alt=""
-                height="12"
-                width="12"
-              />{" "}
-              PRICE{" "}
-              <img
-                src={require("../assets/images/sort.png")}
-                alt=""
-                height="12"
-                width="12"
-              />
-            </th>
+            <th>PRICE</th>
           </tr>
         </thead>
         <tbody>
-          {users &&
-            users.map((user, i) => {
+          {list &&
+            list.map((item, i) => {
               return (
                 <tr key={i}>
                   <td className="text-center">
                     <input
                       type="checkbox"
-                      checked={user.isSelected}
-                      onChange={(e) => onCheck(e.target.checked, user.id)}
+                      checked={item.isSelected}
+                      onChange={(e) => onCheck(e.target.checked, item.bookID)}
                     />
                   </td>
-                  <td className="text-left">{user.Name}</td>
-                  <td className="text-center">{user.level || "-"}</td>
+                  <td className="text-left">{item.sNo}</td>
+                  <td className="text-left">{item.bookID}</td>
+                  <td className="text-center">{item.title || "-"}</td>
+                  <td className="text-center">{item.authors}</td>
                   <td className="text-center">
-                    {" "}
-                    <img
-                      src={user["Profile Image"]}
-                      alt=""
-                      height="25"
-                      width="25"
-                      className="card-img"
-                    />
+                    {item.average_rating &&
+                      Math.floor(item.average_rating) &&
+                      Array(Math.floor(item.average_rating))
+                        .fill()
+                        .map((el, i) => {
+                          return <i className="fas fa-star" key={i} />;
+                        })}
                   </td>
-                  <td className="text-center">{user.Bet}</td>
-                  <td className="text-center">{user.wins || "-"}</td>
-                  <td className="text-center">{user.loss || "-"}</td>
-                  <td className="text-center">{user.Price}</td>
+                  <td className="text-center">{item.isbn || "-"}</td>
+                  <td className="text-center">{item.language_code || "-"}</td>
+                  <td className="text-center">{item.ratings_count}</td>
+                  <td className="text-center">{item.price}</td>
                 </tr>
               );
             })}
@@ -88,7 +73,7 @@ export default function Table({ users, onCheck, onSortBet, onSortPrice }) {
       <div className="pagination">
         <div className="flex justify-between align-items-center">
           <div>
-            <a href="#">
+            <a href="#/" onClick={() => onClickPrev()}>
               <img
                 src={require("../assets/images/left-arrow.png")}
                 alt=""
@@ -97,9 +82,9 @@ export default function Table({ users, onCheck, onSortBet, onSortPrice }) {
               />
             </a>
           </div>
-          <h5>10 of 36</h5>
+          <h5>Page {page}</h5>
           <div>
-            <a href="#">
+            <a href="#/" onClick={() => onClickNext()}>
               <img
                 src={require("../assets/images/right-arrow.png")}
                 alt=""
@@ -108,6 +93,7 @@ export default function Table({ users, onCheck, onSortBet, onSortPrice }) {
               />
             </a>
           </div>
+          Total books - {totalLength}
         </div>
       </div>
     </div>

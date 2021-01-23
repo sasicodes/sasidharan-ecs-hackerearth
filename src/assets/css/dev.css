@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   font-size: 14px;
@@ -6,6 +5,7 @@ body {
 .content {
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 .mx-auto {
   margin-left: auto;
@@ -26,15 +26,28 @@ body {
 }
 .flex-side {
   background-color: #ecf0f2;
-  width: 30%;
+  min-width: 20%;
+  max-width: 20%;
   display: flex;
   flex-direction: column;
   justify-content: start;
   padding-bottom: 2rem;
 }
+.price {
+  background-color: rgb(197, 197, 209);
+  border-radius: 10px;
+  padding: 0 5px;
+}
+.table-resp {
+  overflow-x: auto;
+}
 .flex-main {
   flex-grow: 0;
-  margin: 30px 25px;
+  margin: 30px 0px;
+  max-width: 80%;
+}
+.above-table {
+  margin: 0px 25px;
 }
 .text-muted {
   color: #6c757d;
@@ -61,6 +74,10 @@ body {
 .mt-5 {
   margin-top: 5px;
 }
+.fa-check-circle {
+  color: #4caf50;
+  font-size: 30px;
+}
 .justify-between {
   justify-content: space-between;
 }
@@ -68,6 +85,12 @@ body {
   margin: 15px 0px;
   justify-content: space-between;
   align-items: center;
+  background-color: rgb(231, 231, 238);
+  border-radius: 10px;
+  padding: 0 5px;
+}
+.fa-star {
+  color: rgba(205, 213, 50, 0.967);
 }
 .fs-13 {
   font-size: 13px;
@@ -75,7 +98,7 @@ body {
 .text-blue {
   color: blue;
 }
-.start-btn {
+.buy-btn {
   background-color: blue;
   border-color: blue;
   color: white;
@@ -89,7 +112,7 @@ body {
   font-family: inherit;
   margin-top: 20px;
 }
-.start-btn:focus {
+.buy-btn:focus {
   outline: none;
 }
 table {
@@ -243,6 +266,10 @@ td {
   margin-right: 5px;
   margin-left: 5px;
 }
+.mx-15 {
+  margin-right: 15px;
+  margin-left: 15px;
+}
 .circle {
   background-color: black;
   text-align: center;
@@ -266,6 +293,6 @@ td {
   box-shadow: 2px 0rem 2rem 7px rgba(0, 0, 0, 0.175);
   font-family: inherit;
 }
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer;
 }
