@@ -20,8 +20,8 @@ to start the dev server.
 
 Based on the given requirements, I have attached the source zip with the test in HackerEarth.
 
-
-## HOSTED URL  - https://sasi-ecs-hackerearth.netlify.app/
+## GITHUB URL  - https://github.com/sasidharank/sasidharan-ecs-hackerearth
+## HOSTED URL  - https://sasi-ecs-hackerearth.netlify.app
 
 Thanks,
 Sasidharan K
