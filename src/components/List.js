@@ -62,6 +62,7 @@ export default function UserList(props) {
         element.isSelected = value;
       }
     });
+    console.log(userList);
     setList(JSON.parse(JSON.stringify(userList)));
   };
 
